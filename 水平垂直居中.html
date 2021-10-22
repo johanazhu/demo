@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居中的几种解决方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .son {
+            width: 100px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .div {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            border: 1px solid black;
+        }
+
+        /* 1.绝对居中 + transform 位移 */
+        .father1 {
+            position: relative;
+        }
+
+        .father1 .son {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        /* 2.flex 属性居中 */
+        .father2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 3.flex + margin auto */
+        .father3 {
+            display: flex;
+        }
+
+        .father3 .son {
+            margin: auto;
+        }
+
+        /* 4.grid 属性居中 */
+        .father4 {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 5.grid + 子项属性居中 */
+        .father5 {
+            display: grid;
+        }
+
+        .father5 .son {
+            justify-self: center;
+            align-self: center;
+        }
+
+        /* 6.-webkit-box 属性居中 */
+        .father6 {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+
+        /* 7.table-cell + text-align */
+        .father7 {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .father7 .son {
+            display: inline-block;
+        }
+
+        /* 8.line-height + text-align */
+        .father8 {
+            line-height: 200px;
+            text-align: center;
+        }
+
+        .father8 .son {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: initial;
+        }
+
+        /* 9.writing-mode */
+        .father9 {
+            writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+            text-align: center;
+        }
+
+        .father9 .son {
+            writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .father9 .son .sonson {
+            display: inline-block;
+            text-align: initial;
+        }
+
+        /* 10.table */
+        .father10 {
+            text-align: center;
+        }
+
+        .father10 .son {
+            display: inline-block;
+        }
+
+        /* 11.须知宽高 + absolute + 负 margin */
+        .father11 {
+            position: relative;
+        }
+
+        .father11 .son {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+
+        /* 12.须知宽高 + absolute + calc */
+        .father12 {
+            position: relative;
+        }
+
+        .father12 .son {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+
+        /* 13.须知宽高 absolute + margin: auto */
+        .father13 {
+            position: relative;
+        }
+
+        .father13 .son {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /* 14.须知宽高 + fixed + transform */
+        .father14 .son {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: blue;
+        }
+
+        /* 15.须知宽高 + fixed + 负 margin */
+        .father15 .son {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            background: blue;
+        }
+
+        /* 16.须知宽高 + fixed + calc */
+        .father16 .son {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            background: blue;
+        }
+
+        /* 17.须知宽高 + fixed + margin: auto */
+        .father17 .son {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <p>1.绝对居中 + transform 位移</p>
+    <div class="div father1">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>2.flex 属性居中</p>
+    <div class="div father2">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>3.flex + margin auto</p>
+    <div class="div father3">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>4.grid 属性居中</p>
+    <div class="div father4">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>5.grid + 子项属性居中</p>
+    <div class="div father5">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>6.-webkit-box 属性居中</p>
+    <div class="div father6">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>7.table-cell + text-align</p>
+    <div class="div father7">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>8.line-height + text-align</p>
+    <div class="div father8">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>9.writing-mode</p>
+    <div class="div father9">
+        <div class="son">
+            <div class="sonson">
+                hello world!
+            </div>
+        </div>
+    </div>
+    <p>10.table</p>
+    <table>
+        <tbody>
+            <tr>
+                <td class="div father10">
+                    <div class="son">
+                        <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>11.须知宽高 absolute + 负 margin</p>
+    <div class="div father11">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>12.须知宽高 absolute + calc</p>
+    <div class="div father12">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>13.须知宽高 absolute + margin: auto</p>
+    <div class="div father13">
+        <div class="son">
+            <img src="https://i.loli.net/2021/10/22/yWdM3QPrtfb9amD.jpg" alt="">
+        </div>
+    </div>
+    <p>14.须知宽高 + fixed + transform</p>
+    <div class="div father14">
+        <div class="son">
+        </div>
+    </div>
+    <p>15.须知宽高 + fixed + 负margin</p>
+    <div class="div father15">
+        <div class="son">
+        </div>
+    </div>
+    <p>16.须知宽高 + fixed + calc</p>
+    <div class="div father16">
+        <div class="son">
+        </div>
+    </div>
+    <p>17.须知宽高 + fixed + margin auto</p>
+    <div class="div father17">
+        <div class="son">
+        </div>
+    </div>
+</body>
+
+</html>
