@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左边固定，右边自适应</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left {
+            width: 200px;
+            background: yellow;
+        }
+
+        .right {
+            background: blue;
+        }
+
+        .father {
+            background: grey;
+        }
+
+        /* flex布局 */
+        .flex {
+            display: flex;
+            height: 200px;
+        }
+
+        .right1 {
+            flex: 1;
+        }
+
+        /* grid 布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: 200px calc(100% - 200px);
+            height: 200px;
+        }
+
+        /* 双子元素 + absolute */
+        .absolute1 {
+            position: relative;
+            height: 200px;
+        }
+
+        .left3 {
+            position: absolute;
+            height: 200px;
+        }
+
+        .right3 {
+            position: absolute;
+            left: 200px;
+            width: calc(100% - 200px);
+            height: 200px;
+        }
+
+        /* 左元素 absolute + 右元素 margin-left */
+        .absolute2 {
+            position: relative;
+            height: 200px;
+        }
+
+        .left4 {
+            position: absolute;
+            height: 200px;
+        }
+
+        .right4 {
+            width: calc(100% - 200px);
+            height: 200px;
+            margin-left: 200px;
+        }
+
+        /* 无父元素 + 左元素左浮动，右元素右浮动 */
+        .left5 {
+            float: left;
+            height: 200px;
+        }
+
+        .right5 {
+            height: 200px;
+        }
+
+        /* 无父元素 + 左元素左浮动，右元素有浮动 */
+        .left6 {
+            float: left;
+            height: 200px;
+        }
+
+        .right6 {
+            float: right;
+            height: 200px;
+            width: calc(100% - 200px);
+        }
+    </style>
+</head>
+
+<body>
+    <p>1.flex布局</p>
+    <div class="father flex">
+        <div class="left left1"></div>
+        <div class="right right1"></div>
+    </div>
+    <p>2.grid布局</p>
+    <div class="father grid">
+        <div class="left left2"></div>
+        <div class="right right2"></div>
+    </div>
+    <p>3.双子元素 + absolute</p>
+    <div class="father absolute1">
+        <div class="left left3"></div>
+        <div class="right right3"></div>
+    </div>
+    <p>4.左元素 absolute + 右元素 margin-left </p>
+    <div class="father absolute2">
+        <div class="left left4"></div>
+        <div class="right right4"></div>
+    </div>
+    <p>5.无父元素 + 左元素左浮动，右元素不动</p>
+    <div class="left left5"></div>
+    <div class="right right5"></div>
+    <p>6.无父元素 + 左元素左浮动，右元素有浮动</p>
+    <div class="left left6"></div>
+    <div class="right right6"></div>
+</body>
+
+</html>
