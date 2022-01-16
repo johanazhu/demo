@@ -1,0 +1,49 @@
+html {
+  font-size: 3.2vw;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  height: 40vw;
+  line-height: 40vw;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: 20vw;
+  line-height: 20vw;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+section {
+  display: flex;
+}
+
+.red,
+.yellow,
+.blue {
+  width: 26.6666666667vw;
+  height: 26.6666666667vw;
+}
+
+.red {
+  background: red;
+  float: left;
+}
+
+.yellow {
+  background: yellow;
+  float: left;
+}
+
+.blue {
+  background: blue;
+  float: left;
+}
+
+/*# sourceMappingURL=style.css.map */

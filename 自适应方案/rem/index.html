@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
+    <title>手写 rem 适配</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <script>
+        function setRemUnit() {
+            const docEl = document.documentElement;
+            let rem = docEl.clientWidth / 100;
+            docEl.style.fontSize = rem + 'px'
+        }
+        setRemUnit()
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .left {
+            width: 50rem;
+            height: 50rem;
+            background: red;
+            float: left;
+        }
+
+        .right {
+            width: 50rem;
+            height: 50rem;
+            background: yellow;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">left:200*200</div>
+        <div class="right">right:200*200</div>
+    </div>
+</body>
+
+</html>

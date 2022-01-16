@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+$width: 750px;
+
+@function px2vw($px) {
+  @return #{math.div($px, $width) * 100}vw;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: px2vw(24px);
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  height: px2vw(300px);
+  line-height: px2vw(300px);
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: px2vw(150px);
+  line-height: px2vw(150px);
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+section {
+  display: flex;
+}
+
+.red,
+.yellow,
+.blue {
+  width: px2vw(200px);
+  height: px2vw(200px);
+}
+
+.red {
+  background: red;
+  float: left;
+}
+
+.yellow {
+  background: yellow;
+  float: left;
+}
+
+.blue {
+  background: blue;
+  float: left;
+}
