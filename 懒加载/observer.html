@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <title>通过 IntersectionObserver 实现懒加载</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="loading.gif" data-src="./image/1.jpg" />
+        <img src="loading.gif" data-src="./image/2.jpg" />
+        <img src="loading.gif" data-src="./image/3.jpg" />
+        <img src="loading.gif" data-src="./image/4.jpg" />
+        <img src="loading.gif" data-src="./image/5.jpg" />
+        <img src="loading.gif" data-src="./image/6.jpg" />
+        <img src="loading.gif" data-src="./image/7.jpg" />
+        <img src="loading.gif" data-src="./image/8.jpg" />
+        <img src="loading.gif" data-src="./image/9.jpg" />
+        <img src="loading.gif" data-src="./image/10.jpg" />
+        <img src="loading.gif" data-src="./image/11.jpg" />
+        <img src="loading.gif" data-src="./image/12.jpg" />
+        <img src="loading.gif" data-src="./image/13.jpg" />
+        <img src="loading.gif" data-src="./image/14.jpg" />
+        <img src="loading.gif" data-src="./image/15.jpg" />
+    </div>
+</body>
+<script>
+    let img = document.getElementsByTagName("img");
+    if (IntersectionObserver) {
+        let lazyImageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                console.log('entry', entry)
+                let lazyImage = entry.target;
+                // 如果元素可见
+                if (entry.intersectionRatio > 0) {
+                    if (lazyImage.getAttribute("src") === 'loading.gif') {
+                        lazyImage.src = lazyImage.getAttribute("data-src")
+                    }
+                    lazyImageObserver.unobserve(lazyImage)
+                }
+            })
+        })
+        for (let i = 0; i < img.length; i++) {
+            lazyImageObserver.observe(img[i])
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <title>监听图片高度实现懒加载</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="loading.gif" data-src="./image/1.jpg" />
+        <img src="loading.gif" data-src="./image/2.jpg" />
+        <img src="loading.gif" data-src="./image/3.jpg" />
+        <img src="loading.gif" data-src="./image/4.jpg" />
+        <img src="loading.gif" data-src="./image/5.jpg" />
+        <img src="loading.gif" data-src="./image/6.jpg" />
+        <img src="loading.gif" data-src="./image/7.jpg" />
+        <img src="loading.gif" data-src="./image/8.jpg" />
+        <img src="loading.gif" data-src="./image/9.jpg" />
+        <img src="loading.gif" data-src="./image/10.jpg" />
+        <img src="loading.gif" data-src="./image/11.jpg" />
+        <img src="loading.gif" data-src="./image/12.jpg" />
+        <img src="loading.gif" data-src="./image/13.jpg" />
+        <img src="loading.gif" data-src="./image/14.jpg" />
+        <img src="loading.gif" data-src="./image/15.jpg" />
+    </div>
+</body>
+<script>
+    let img = document.getElementsByTagName("img");
+    let n = 0;
+    lazyload();
+
+    // 节流，200ms 触发一次
+    function throttle(event, time) {
+        let timer = null;
+        return function (...args) {
+            if (!timer) {
+                timer = setTimeout(() => {
+                    timer = null;
+                    event.apply(this, args)
+                }, time)
+            }
+        }
+    }
+
+    window.addEventListener("scroll", throttle(lazyload, 200))
+
+    function lazyload() {
+        let seeHeight = window.innerHeight;
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        for (let i = n; i < img.length; i++) {
+            console.log(img[i].offsetTop, seeHeight, scrollTop)
+            if (img[i].offsetTop < seeHeight + scrollTop) {
+                if (img[i].getAttribute("src") === 'loading.gif') {
+                    img[i].src = img[i].getAttribute("data-src")
+                }
+                n = i + 1
+            }
+        }
+    }
+</script>
+
+</html>
