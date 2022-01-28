@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+$width: 750px;
+
+@function px2rem($px) {
+  @return #{math.div($px, $width) * 10}rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  height: px2rem(300px);
+  line-height: px2rem(300px);
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: px2rem(150px);
+  line-height: px2rem(150px);
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+section {
+  display: flex;
+}
+
+.red,
+.yellow,
+.blue {
+  width: px2rem(200px);
+  height: px2rem(200px);
+}
+
+.red {
+  background: red;
+  float: left;
+}
+
+.yellow {
+  background: yellow;
+  float: left;
+}
+
+.blue {
+  background: blue;
+  float: left;
+}

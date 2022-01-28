@@ -1,0 +1,52 @@
+:root {
+  --ideal-viewport-width: 750;
+  --current-viewport-width: 100vw;
+  --min-viewport-width: 320px;
+  --max-viewport-width: 1440px;
+  --clamped-viewport-width: clamp(
+    var(--min-viewport-width),
+    var(--current-viewport-width),
+    var(--max-viewport-width)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: calc(24 * var(--clamped-viewport-width) / var(--ideal-viewport-width));
+}
+
+body {
+  width: 100vw;
+}
+
+section {
+  display: flex;
+}
+
+.red,
+.yellow,
+.blue {
+  width: calc(200 * var(--clamped-viewport-width) / var(--ideal-viewport-width));
+  height: calc(200 * var(--clamped-viewport-width) / var(--ideal-viewport-width));
+}
+
+.red {
+  background: red;
+  float: left;
+}
+
+.yellow {
+  background: yellow;
+  float: left;
+}
+
+.blue {
+  background: blue;
+  float: left;
+}
+
+/*# sourceMappingURL=style.css.map */

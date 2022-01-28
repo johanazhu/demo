@@ -6,17 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <title>监听图片高度实现懒加载</title>
+    <title>通过 getBoundingClientRect 实现懒加载</title>
     <style>
-        img[data-src] {
-            filter: blur(0.2em);
-        }
-
         img {
             width: 100%;
             height: 100%;
-            filter: blur(0em);
-            transition: filter 0.5s;
         }
     </style>
 </head>
@@ -61,11 +55,11 @@
     window.addEventListener("scroll", throttle(lazyload, 200))
 
     function lazyload() {
-        let seeHeight = window.innerHeight;
-        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        // let seeHeight = window.innerHeight;
+        let seeHeight = document.documentElement.clientHeight;
         for (let i = n; i < img.length; i++) {
-            console.log(img[i].offsetTop, seeHeight, scrollTop)
-            if (img[i].offsetTop < seeHeight + scrollTop) {
+            console.log(img[i].getBoundingClientRect(), seeHeight)
+            if (img[i].getBoundingClientRect().top < seeHeight) {
                 if (img[i].getAttribute("src") === 'loading.gif') {
                     img[i].src = img[i].getAttribute("data-src")
                 }

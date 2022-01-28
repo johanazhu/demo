@@ -8,41 +8,54 @@
         content="width=device-width; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;">
     <title>手写 rem 适配</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./style.css">
     <script>
+
+        var docEl = document.documentElement
+        var dpr = window.devicePixelRatio || 1
+
+        // body
+        function setBodyFontSize() {
+            if (document.body) {
+                document.body.style.fontSize = 12 + 'px'
+            }
+            else {
+                document.addEventListener('DOMContentLoaded', setBodyFontSize)
+            }
+        }
+        setBodyFontSize();
+
+        // 根元素
         function setRemUnit() {
-            const docEl = document.documentElement;
-            let rem = docEl.clientWidth / 100;
+
+            var rem = docEl.clientWidth / 10;
             docEl.style.fontSize = rem + 'px'
         }
         setRemUnit()
+
+        if (dpr >= 2) {
+            var fakeBody = document.createElement('body')
+            var testElement = document.createElement('div')
+            testElement.style.border = '.5px solid transparent'
+            fakeBody.appendChild(testElement)
+            docEl.appendChild(fakeBody)
+            if (testElement.offsetHeight === 1) {
+                docEl.classList.add('hairlines')
+            }
+            docEl.removeChild(fakeBody)
+        }
+
     </script>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        .left {
-            width: 50rem;
-            height: 50rem;
-            background: red;
-            float: left;
-        }
-
-        .right {
-            width: 50rem;
-            height: 50rem;
-            background: yellow;
-            float: left;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">left:200*200</div>
-        <div class="right">right:200*200</div>
-    </div>
+    <header>375 * 150</header>
+    <section>
+        <div class="red">红:200*200</div>
+        <div class="yellow">黄:200*200</div>
+        <div class="blue">蓝:200*200</div>
+    </section>
+    <footer>375 * 75</footer>
 </body>
 
 </html>

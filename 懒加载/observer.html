@@ -17,21 +17,21 @@
 
 <body>
     <div>
-        <img src="loading.gif" data-src="./image/1.jpg" />
-        <img src="loading.gif" data-src="./image/2.jpg" />
-        <img src="loading.gif" data-src="./image/3.jpg" />
-        <img src="loading.gif" data-src="./image/4.jpg" />
-        <img src="loading.gif" data-src="./image/5.jpg" />
-        <img src="loading.gif" data-src="./image/6.jpg" />
-        <img src="loading.gif" data-src="./image/7.jpg" />
-        <img src="loading.gif" data-src="./image/8.jpg" />
-        <img src="loading.gif" data-src="./image/9.jpg" />
-        <img src="loading.gif" data-src="./image/10.jpg" />
-        <img src="loading.gif" data-src="./image/11.jpg" />
-        <img src="loading.gif" data-src="./image/12.jpg" />
-        <img src="loading.gif" data-src="./image/13.jpg" />
-        <img src="loading.gif" data-src="./image/14.jpg" />
-        <img src="loading.gif" data-src="./image/15.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/1.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/2.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/3.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/4.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/5.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/6.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/7.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/8.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/9.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/10.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/11.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/12.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/13.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/14.jpg" />
+        <img src="https://via.placeholder.com/350x150" data-src="./image/15.jpg" />
     </div>
 </body>
 <script>
@@ -43,7 +43,7 @@
                 let lazyImage = entry.target;
                 // 如果元素可见
                 if (entry.intersectionRatio > 0) {
-                    if (lazyImage.getAttribute("src") === 'loading.gif') {
+                    if (lazyImage.getAttribute("src") === 'https://via.placeholder.com/350x150') {
                         lazyImage.src = lazyImage.getAttribute("data-src")
                     }
                     lazyImageObserver.unobserve(lazyImage)
