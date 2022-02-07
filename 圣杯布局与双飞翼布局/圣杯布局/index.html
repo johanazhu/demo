@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣杯布局</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <style>
+        body {
+            min-width: 700px;
+        }
+
+        header,
+        footer {
+            background: grey;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        .left,
+        .middle,
+        .right {
+            position: relative;
+            float: left;
+            min-height: 130px;
+        }
+
+        .container {
+            padding: 0 220px 0 200px;
+            overflow: hidden;
+        }
+
+        .middle {
+            width: 100%;
+            background: red;
+        }
+
+        .left {
+            margin-left: -100%;
+            left: -200px;
+            width: 200px;
+            background: green;
+        }
+
+        .right {
+            margin-left: -220px;
+            right: -220px;
+            width: 220px;
+            background: blue
+        }
+
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>圣杯布局-组成头部</header>
+    <section class="container">
+        <div class="middle">中间部分自适</div>
+        <div class="left">左边栏固定宽度</div>
+        <div class="right">右边栏固定宽度</div>
+    </section>
+    <footer>组成尾部</footer>
+</body>
+
+</html>
