@@ -20,19 +20,19 @@ function App() {
 
     return (
         <div className="App">
-            <h1>十万条数据渲染懒加载-scroll</h1>
-            {/* <h1>十万条数据渲染懒加载-IntersectionObserver</h1> */}
-            <LazyList
+            {/* <h1>十万条数据渲染懒加载-getBoundingClientRect</h1> */}
+            <h1>十万条数据渲染懒加载-IntersectionObserver</h1>
+            {/* <LazyList
                 data={data.slice(0, count * 20)}
                 changeData={() => {
                     setCount(count => count + 1)
-                }} />
+                }} /> */}
             {/* <GBCRLazyList
                 data={data.slice(0, count * 20)}
                 changeData={() => {
                     setCount(count => count + 1)
                 }} /> */}
-            {/* <IOLazyList
+            <IOLazyList
                 data={data.slice(0, count * 20)}
                 changeData={(isAdd) => {
                     console.log('isAdd', isAdd)
@@ -43,7 +43,7 @@ function App() {
                             setCount(count => count - 1)
                         }
                     }
-                }} /> */}
+                }} />
         </div>
     );
 }
