@@ -17,8 +17,9 @@ for (let id = 0; id < 10000; id++) {
 function App() {
     return (
         <div className="App">
-            {/* <VirtualList data={data} /> */}
-            <IOVirtualList data={data} height={195} />
+            <h1>十万条数据渲染-虚拟列表-scroll</h1>
+            <VirtualList data={data} />
+            {/* <IOVirtualList data={data} height={195} /> */}
             {/* <GBCRVirtualList data={data} /> */}
         </div>
     );
