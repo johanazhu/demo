@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#App {
+  height: 100%;
+}
+
+.virtual-list {
+  height: 400px;
+  overflow: auto;
+  position: relative;
+  border: 1px solid #666;
+}
+
+.virtual-list-phantom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.virtual-list-content {
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.virtual-list-item {
+  padding: 5px;
+  color: #666;
+  height: 30px;
+  line-height: 30px;
+}
+
+.io-virtual-list-item {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  box-shadow: 2px 2px 9px 0px #bbb;
+  padding: 70px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 10%;
+  width: 80%;
+}

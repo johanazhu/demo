@@ -1,0 +1,22 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+.lazy-list {
+  border: 1px solid #666;
+}
+
+.lazy-list-item {
+  padding: 5px;
+  color: #555;
+  box-sizing: border-box;
+  border-bottom: 1px solid #999;
+}
