@@ -29,5 +29,5 @@
 - [渲染十万条数据解决方案-懒加载-scroll](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/scroll/index.html)
 - [渲染十万条数据解决方案-懒加载-getBoundingClientRect](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/getBoundingClientRect/index.html)
 - [渲染十万条数据解决方案-懒加载-IntersectionObserver](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
-- [时间分片-一次性渲染问题](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/index.html)
+- [时间分片-一次性所处渲染问题](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/index.html)
 - [时间分片-解决方案](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/requestAnimationFrame.html)
