@@ -31,3 +31,7 @@
 - [渲染十万条数据解决方案-懒加载-IntersectionObserver](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
 - [时间分片-一次性所处渲染问题](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/index.html)
 - [时间分片-解决方案](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/requestAnimationFrame.html)
+
+## React
+
+- [setState 是同步还是异步](https://azhubaby.com/demo/setState是同步还是异步/build/index.html)
