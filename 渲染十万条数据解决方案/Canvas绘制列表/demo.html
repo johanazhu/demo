@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="500"></canvas>
+    <script>
+        let now = Date.now();
+        // 插入十万条数据
+        const total = 10;
+
+        function draw() {
+            var canvas = document.getElementById('mycanvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                for (let i = 0; i < total; i++) {
+                    ctx.font = "30px serif";
+                    ctx.fillText(~~(Math.random() * total), 10, 50 * i);
+                }
+
+                // ctx.fillStyle = "rgb(200,0,0)";
+                // ctx.fillRect(10, 10, 55, 50);
+
+                // ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+                // ctx.fillRect(30, 30, 55, 50);
+                // var rectangle = new Path2D();
+                // rectangle.rect(10, 10, 50, 50);
+
+                // var circle = new Path2D();
+                // circle.moveTo(125, 35);
+                // circle.arc(100, 35, 25, 0, 2 * Math.PI);
+
+                // ctx.stroke(rectangle);
+                // ctx.fill(circle);
+            }
+        }
+        draw()
+
+
+    </script>
+</body>
+
+</html>

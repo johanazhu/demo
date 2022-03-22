@@ -8,6 +8,8 @@
 - [左边固定，右边自适应](https://azhubaby.com/demo/左边固定，右边自适应.html)
 - [圣杯布局](https://azhubaby.com/demo/圣杯布局与双飞翼布局/圣杯布局/index.html)
 - [双飞翼布局](https://azhubaby.com/demo/圣杯布局与双飞翼布局/双飞翼布局/index.html)
+- [三角形](https://azhubaby.com/demo/三角形.html)
+- [BFC](https://azhubaby.com/demo/BFC.html)
 
 ## 📌 自适应方案
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById('canvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                ctx.fillRect(25, 25, 100, 100);
+                ctx.clearRect(45, 45, 60, 60);
+                ctx.strokeRect(50, 50, 50, 50);
+            }
+        }
+        draw()
+    </script>
+</body>
+
+</html>
