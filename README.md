@@ -37,3 +37,7 @@
 ## React
 
 - [setState 是同步还是异步](https://azhubaby.com/demo/setState是同步还是异步/build/index.html)
+
+## 性能优化
+
+- [防抖与节流](https://azhubaby.com/demo/防抖与节流/index.html)
