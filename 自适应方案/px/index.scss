@@ -25,6 +25,28 @@ body {
   width: 100vw;
 }
 
+header {
+  height: calc(
+    300 * var(--clamped-viewport-width) / var(--ideal-viewport-width)
+  );
+  line-height: calc(
+    300 * var(--clamped-viewport-width) / var(--ideal-viewport-width)
+  );
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+footer {
+  height: calc(
+    150 * var(--clamped-viewport-width) / var(--ideal-viewport-width)
+  );
+  line-height: calc(
+    150 * var(--clamped-viewport-width) / var(--ideal-viewport-width)
+  );
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
 section {
   display: flex;
 }
