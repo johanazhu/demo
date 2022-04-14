@@ -16,7 +16,8 @@
 - [REM 布局(手写 rem)](https://azhubaby.com/demo/自适应方案/rem/index.html)
 - [REM 布局(flexible)](https://azhubaby.com/demo/自适应方案/flexible/index.html)
 - [VW 布局](https://azhubaby.com/demo/自适应方案/vw/index.html)
-- [PX + VW 布局](https://azhubaby.com/demo/自适应方案/px/index.html)
+- [PX + CSS变量 布局](https://azhubaby.com/demo/自适应方案/px/index.html)
+- [媒体查询布局](https://azhubaby.com/demo/自适应方案/media/index.html)
 
 ## 📌 懒加载方案
 
