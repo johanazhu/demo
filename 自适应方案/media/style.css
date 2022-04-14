@@ -1,0 +1,59 @@
+/*pad*/
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 18px; } }
+
+/*big*/
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 17px; } }
+
+/*middle*/
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 16px; } }
+
+/*small*/
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 15px; } }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  width: 100%; }
+
+header {
+  height: 9.375rem;
+  line-height: 9.375rem;
+  text-align: center;
+  background-color: #f2f2f2; }
+
+footer {
+  height: 4.6875rem;
+  line-height: 4.6875rem;
+  text-align: center;
+  background-color: #f2f2f2; }
+
+section {
+  display: flex; }
+
+.red,
+.yellow,
+.blue {
+  width: 6.25rem;
+  height: 6.25rem; }
+
+.red {
+  background: red;
+  float: left; }
+
+.yellow {
+  background: yellow;
+  float: left; }
+
+.blue {
+  background: blue;
+  float: left; }
