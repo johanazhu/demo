@@ -12,9 +12,9 @@
     <div>这里是 beforeunload 事件的demo地址，试着关闭浏览器试试</div>
     <script>
         window.addEventListener('beforeunload', (event) => {
-            // 取消事件
+            // 显示确认对话框
             event.preventDefault();
-            // event.returnValue = '';
+            event.returnValue = '';
         })
     </script>
 </body>
