@@ -10,7 +10,7 @@ var options = {
 app.use(express.static((__dirname + '/public'), options));
 app.get('/', function (req, res) {
     res.send(`
-        <h1>Hello Negotiate Cache</h1>
+        <h1>Hello Stong Cache</h1>
         <p>使用说明</p>
         <li>打开F12，观察Network</li>
         <li>在url后面输入/1.jpg</li>
