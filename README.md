@@ -42,3 +42,11 @@
 ## 性能优化
 
 - [防抖与节流](https://azhubaby.com/demo/防抖与节流/index.html)
+
+## 网络缓存策略
+
+- [强缓存](https://strong-cache.vercel.app/)
+
+- [协商缓存](https://negotiate-cache.vercel.app/)
+
+> 网络缓存因是服务端应用，遂部署至Vercel，打开如若慢了点，请等待

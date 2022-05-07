@@ -1,0 +1,10 @@
+# ide
+/.vscode
+/.idea
+
+
+/node_modules
+
+.vercel
+
+.vercel
