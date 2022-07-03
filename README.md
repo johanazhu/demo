@@ -53,5 +53,5 @@
 
 ## 微信系列
 
-- [微信特性之 WeixinJSBridge](https://azhubaby.com/demo/Wechat/WeixinJSBridge.html)
-- [微信特性之 自动播放音乐](https://azhubaby.com/demo/Wechat/自动播放音乐.html)
+- [微信特性之 WeixinJSBridge](https://azhubaby.com/demo/WeChat/WeixinJSBridge.html)
+- [微信特性之 自动播放音乐](https://azhubaby.com/demo/WeChat/自动播放音乐.html)
