@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <title>微信特性之：WeixinJSBridge API</title>
+
+    <style>
+        .content {
+            color: #323233;
+            padding: 10px;
+        }
+
+        .content .tips {
+            color: rgb(238, 10, 36);
+            font-size: 20px;
+        }
+
+        .desc {
+            font-size: 16px;
+            padding: 10px 0
+        }
+
+        #toggleMenuBtn,
+        #getNetType,
+        #closeWindow,
+        #toggleToolbar {
+            display: block;
+            height: 30px;
+            margin: 20px 0
+        }
+
+        .footer .tips {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3 class=tips>提示：本页面只在微信中打开有效！</h3>
+        <div class="desc">微信开放的原生接口：WeixinJSBridge，本例只展示「隐藏或显示右上角按钮」、「获取网络状态」、「关闭网页」等三个实用型较强接口</div>
+        <div class="demo-content">
+            <button id="toggleMenuBtn">隐藏左上角按钮</button>
+            <button id="getNetType">获取网络状态</button>
+            <button id="closeWindow">关闭网页</button>
+        </div>
+        <hr>
+        <div class="footer">
+            <div class="tips">失效的功能：隐藏或显示底部导航栏，</div>
+            <button id="toggleToolbar">隐藏底部导航栏</button>
+            <a href="https://www.baidu.com/">跳转百度</a>
+        </div>
+    </div>
+</body>
+<script>
+    var menuHidden = false;
+    var toolbarHidden = false;
+    var netType = {
+        "network_type:wifi": "wifi网络",
+        "network_type:edge": "非wifi,包含3G/2G",
+        "network_type:fail": "网络断开连接",
+        "network_type:wwan": "2g或者3g"
+    };
+    document.addEventListener("WeixinJSBridgeReady", function onBridgeReady() {
+        document.getElementById("toggleMenuBtn").addEventListener("click", function (a) {
+            if (!menuHidden) {
+                WeixinJSBridge.call("hideOptionMenu");
+                menuHidden = true;
+                this.value = "显示右上角按钮"
+            } else {
+                WeixinJSBridge.call("showOptionMenu");
+                menuHidden = false;
+                this.value = "隐藏右上角按钮"
+            }
+        }, false);
+        document.getElementById("toggleToolbar").addEventListener("click", function (a) {
+            if (!toolbarHidden) {
+                WeixinJSBridge.call("hideToolbar");
+                toolbarHidden = true;
+                this.value = "显示底部导航栏"
+            } else {
+                WeixinJSBridge.call("showToolbar");
+                toolbarHidden = false;
+                this.value = "隐藏底部导航栏"
+            }
+        }, false);
+        document.getElementById("getNetType").addEventListener("click", function (a) {
+            WeixinJSBridge.invoke("getNetworkType", {}, function (b) {
+                alert(netType[b.err_msg])
+            })
+        }, false)
+        document.getElementById("closeWindow").addEventListener(
+            "click", function () {
+                WeixinJSBridge.invoke("closeWindow", {}, function (e) { })
+            }, false)
+    });
+</script>
+
+</html>

@@ -16,7 +16,7 @@
 - [REM 布局(手写 rem)](https://azhubaby.com/demo/自适应方案/rem/index.html)
 - [REM 布局(flexible)](https://azhubaby.com/demo/自适应方案/flexible/index.html)
 - [VW 布局](https://azhubaby.com/demo/自适应方案/vw/index.html)
-- [PX + CSS变量 布局](https://azhubaby.com/demo/自适应方案/px/index.html)
+- [PX + CSS 变量 布局](https://azhubaby.com/demo/自适应方案/px/index.html)
 - [媒体查询布局](https://azhubaby.com/demo/自适应方案/media/index.html)
 
 ## 📌 懒加载方案
@@ -49,4 +49,8 @@
 
 - [协商缓存](https://negotiate-cache.vercel.app/)
 
-> 网络缓存因是服务端应用，遂部署至Vercel，打开如若慢了点，请等待
+> 网络缓存因是服务端应用，遂部署至 Vercel，打开如若慢了点，请等待
+
+## 微信系列
+
+- [微信特性之 WeixinJSBridge](https://azhubaby.com/demo/WeixinJSBridge.html)
