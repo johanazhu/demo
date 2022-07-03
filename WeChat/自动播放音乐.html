@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <title>微信特性之：自动播放音乐</title>
+    <!-- <link href="https://cdn.bootcdn.net/ajax/libs/Swiper/3.2.7/css/swiper.min.css" rel="stylesheet">-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/3.2.7/js/swiper.min.js"></script>
+
+    <style>
+        .swiper-container {
+            height: 100vh;
+        }
+
+        .blue-slide {
+            background: #4390EE;
+        }
+
+        .red-slide {
+            background: #CA4040;
+        }
+
+        .orange-slide {
+            background: #FF8604;
+        }
+
+        .swiper-slide {
+            color: #fff;
+            font-size: 36px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tips {
+            z-index: 10;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide blue-slide">我就是我</div>
+            <div class="swiper-slide red-slide">是颜色不一样的</div>
+            <div class="swiper-slide orange-slide">烟火</div>
+        </div>
+    </div>
+    <div class="tips">向下滑动</div>
+    <audio autoplay loop id="bg-music" src="background.mp3" />
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        // autoplay: 3000,
+        direction: 'vertical'
+    });
+    // Chrome的autoplay政策在2018年4月做了更改，需要交互才能播放音乐
+    window.onload = function () {
+        function audioAutoPlay() {
+            var audio = document.getElementById('bg-music');
+            audio?.play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                console.log('监听 html WeixinJSBridgeReady')
+                audio?.play();
+            }, false);
+        }
+        audioAutoPlay();
+    }
+</script>
+
+</html>

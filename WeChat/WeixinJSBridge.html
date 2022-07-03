@@ -78,6 +78,14 @@
                 this.value = "隐藏右上角按钮"
             }
         }, false);
+        document.getElementById("closeWindow").addEventListener("click", function () {
+            WeixinJSBridge.invoke("closeWindow", {}, function (e) { })
+        }, false)
+        document.getElementById("getNetType").addEventListener("click", function (a) {
+            WeixinJSBridge.invoke("getNetworkType", {}, function (b) {
+                alert(netType[b.err_msg])
+            })
+        }, false)
         document.getElementById("toggleToolbar").addEventListener("click", function (a) {
             if (!toolbarHidden) {
                 WeixinJSBridge.call("hideToolbar");
@@ -89,15 +97,6 @@
                 this.value = "隐藏底部导航栏"
             }
         }, false);
-        document.getElementById("getNetType").addEventListener("click", function (a) {
-            WeixinJSBridge.invoke("getNetworkType", {}, function (b) {
-                alert(netType[b.err_msg])
-            })
-        }, false)
-        document.getElementById("closeWindow").addEventListener(
-            "click", function () {
-                WeixinJSBridge.invoke("closeWindow", {}, function (e) { })
-            }, false)
     });
 </script>
 
