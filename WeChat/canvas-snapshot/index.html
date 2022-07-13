@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快照解决方案</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="capture">
+            <div class="bg"></div>
+            <div class="top">
+                <img class="top-img1" src="./images/bg-ripple.png" alt="">
+                <img class="top-img2" src="./images/bg-top.png" alt="">
+                <div class="top-title">
+                    <div class="top-title-p1">傻瓜预测</div>
+                    <div class="top-title-p2">退休养老金</div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="center-top">
+                    <div class="center-avator">
+                        <img src="./images/avatar.png" alt="">
+                    </div>
+                    <div class="center-keywords">您的退休关键词</div>
+                    <div class="center-words"></div>
+                </div>
+                <div class="center-bottom">
+                    <div class="center-desc">若60岁退休</div>
+                    <div class="center-desc">预估可领养老金(元/月)</div>
+                    <div class="center-price"></div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <div class="bottom-text">
+                    <div class="bottom-text-p1">扫一扫二维码</div>
+                    <div class="bottom-text-p2">测算你的养老金</div>
+                </div>
+                <div class="bottom-qr">
+                    <div class="bottom-qrcode" id="qrcode">
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="save">
+            <!-- 生成的图片 -->
+        </div>
+        <footer>长按保存你的结果页</footer>
+    </div>
+
+</body>
+<script src="./libs/html2canvas.min.js"></script>
+<script src="./libs/canvas2image.js"></script>
+<script src="./libs/qrcode.min.js"></script>
+<script src="./js/convertToImage.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

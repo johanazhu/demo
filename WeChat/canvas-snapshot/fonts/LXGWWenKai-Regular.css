@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "LXGWWenKai-Regular";
+    src: url("LXGWWenKai-Regular.eot"); /* IE9 */
+    src: url("LXGWWenKai-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("LXGWWenKai-Regular.woff") format("woff"), /* chrome、firefox */
+    url("LXGWWenKai-Regular.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("LXGWWenKai-Regular.svg#LXGWWenKai-Regular") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

@@ -51,7 +51,8 @@
 
 > 网络缓存因是服务端应用，遂部署至 Vercel，打开如若慢了点，请等待
 
-## 微信系列
+## 微信营销页面
 
-- [微信特性之 WeixinJSBridge](https://azhubaby.com/demo/WeChat/WeixinJSBridge.html)
-- [微信特性之 自动播放音乐](https://azhubaby.com/demo/WeChat/自动播放音乐.html)
+- [微信营销页面之 WeixinJSBridge](https://azhubaby.com/demo/WeChat/WeixinJSBridge.html)
+- [微信营销页面之 自动播放音乐](https://azhubaby.com/demo/WeChat/自动播放音乐.html)
+- [微信营销页面之 网页长按保存及识别二维码](https://azhubaby.com/demo/WeChat/canvas-snapshot/index.html)

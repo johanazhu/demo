@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "LWGW";
+  src: url("../fonts/LXGWWenKai-Regular.eot"); /* IE9 */
+  src: url("../fonts/LXGWWenKai-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/LXGWWenKai-Regular.woff") format("woff"),
+    /* chrome, firefox */ url("../fonts/LXGWWenKai-Regular.ttf")
+      format("truetype"),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url("../fonts/LXGWWenKai-Regular.svg#HYXiaoMaiTiJ") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Helvetica, Tahoma, Arial, "PingFangSC", "HiraginoSansGB",
+    "HeitiSC", "MicrosoftYaHei", "WenQuanYiMicroHei", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.save {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background: #ececec;
+  bottom: 0;
+  font-size: 1rem;
+  line-height: 50px;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  background: url(../images/bg.png) center 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.top-img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 235px;
+}
+
+.top-img2 {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100px;
+}
+
+.top-title {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%);
+}
+
+.top-title-p1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #059dda;
+  font-family: "LWGW";
+  text-shadow: 2px 4px 5px rgb(0 0 0 / 10%);
+}
+
+.top-title-p2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #efb48e;
+  font-family: "LWGW";
+  text-shadow: 2px 4px 5px rgb(0 0 0 / 20%);
+}
+
+.center {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #d8f9fe;
+  width: calc(100% - 4rem);
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 0 10px 20px 0 #a5dee0;
+  line-height: 1.5715;
+}
+
+.center-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.center-avator {
+  width: 50px;
+  height: 50px;
+}
+
+.center-avator img {
+  border-radius: 50%;
+}
+
+.center-keywords {
+  padding-top: 0.5rem;
+}
+
+.center-words {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  height: 2rem;
+  font-weight: 600;
+  color: #18baec;
+}
+
+.center-bottom {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 60%;
+  /* background: linear-gradient(90deg, #fff, transparent); */
+  background: url("../images/bg-bottom.png") no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.center-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #18baec;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: calc(100% - 2rem);
+  padding: 0 1rem;
+}
+
+.bottom-logo {
+  width: 40px;
+}
+
+.bottom-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 0.5rem;
+}
+
+.bottom-text-p1 {
+  font-size: 0.75rem;
+}
+
+.bottom-text-p2 {
+  font-size: 0.75rem;
+  color: #18baec;
+}
+
+.bottom-qr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #18baec;
+  border-radius: 0.5rem;
+}
+
+.bottom-qrcode {
+  width: 80%;
+  height: 80%;
+  background: #b1e7ea;
+}
