@@ -1,6 +1,8 @@
-这里是我做的一些 demo 的线上版本
-
 # 📺 代码示例效果
+
+这是我做的一些 demo 的合集，线上链接：[azhubaby.com/demo/](https://azhubaby.com/demo/)
+
+> 链接失效，请随时提出 issues
 
 ## 📌CSS
 
@@ -56,3 +58,16 @@
 - [微信营销页面之 WeixinJSBridge](https://azhubaby.com/demo/WeChat/WeixinJSBridge.html)
 - [微信营销页面之 自动播放音乐](https://azhubaby.com/demo/WeChat/自动播放音乐.html)
 - [微信营销页面之 网页长按保存及识别二维码](https://azhubaby.com/demo/WeChat/canvas-snapshot/index.html)
+
+
+
+## 请我喝咖啡☕️
+
+如果您觉得这个项目能够帮助到您，可以给我个 star🌟，也可以推荐给您的朋友
+
+持续更新中～ 🚀🚀🚀
+
+![](https://s2.loli.net/2022/10/09/31kvp8HRJuoBCfc.jpg)
+
+## License
+MIT
