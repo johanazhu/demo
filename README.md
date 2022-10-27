@@ -67,7 +67,7 @@
 
 持续更新中～ 🚀🚀🚀
 
-![](https://s2.loli.net/2022/10/09/31kvp8HRJuoBCfc.jpg)
+<img src="https://s2.loli.net/2022/10/09/31kvp8HRJuoBCfc.jpg" height="300px" width="300px" />
 
 ## License
 MIT

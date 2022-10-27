@@ -1,0 +1,236 @@
+---
+title: Build your own React
+date: 2022-10-31
+---
+
+import { WaveSection } from "gatsby-theme-waves"
+
+---
+
+> ⚠️ 等等！我还在写这个帖子 ⚠️
+
+---
+
+我们将从头开始重写React。一步步来。遵循真正的React代码的架构，但没有所有的优化和非必要的功能。
+
+这是我第三次构建一个迷你反应。第一次是在React v16之前。第二次是在React v16之后，当时引入了Fiber架构。而第三个，也就是这个，是基于v16.8的：有钩子的那个。
+
+你可以在[Didact repo]（https://github.com/pomber/didact）上找到所有博文和代码的历史。还有一个[涵盖相同内容的讲座](https://youtu.be/8Kc2REHdwnQ)。
+
+但这篇文章是自成一体的。从零开始，这些都是我们将逐一添加到我们的React版本中的东西。
+
+- **第一步**: 创建元素函数
+- **第二步**: 创建渲染函数
+- **第三步**: 并行模式
+- **第四步**: Fiber 架构
+- **第五步**: 渲染和提交阶段
+- **第六步**: 对账
+- **第七步**: 函数式组件
+- **第八步**: Hooks
+
+我们将写300行左右的代码。不要指望在10分钟内完成这个帖子。这将需要一些时间，但这是值得的。你可以在各步骤之间停下来，以后再来。
+
+<WaveSection>
+
+```jsx
+const element = <h1 title="foo">Hello</h1>
+const container = document.getElementById("root")
+ReactDOM.render(element, container)
+```
+
+### 第零步: 回顾
+
+首先让我们回顾一下一些基本概念。如果你已经对React、JSX、元素和DOM突变的工作方式有了很好的了解，你可以跳过这一步。
+
+我们将使用这个React应用程序，只有三行代码。第一行定义了一个React元素。下一行从DOM中获取一个节点。最后一行是将React元素渲染到容器中。
+
+**让我们删除所有React特定的代码，用普通的JavaScript代替它**.
+
+```jsx 1
+const element = <h1 title="foo">Hello</h1>
+const container = document.getElementById("root")
+ReactDOM.render(element, container)
+```
+
+在第一行，我们有一个元素，用JSX定义。它甚至不是有效的JavaScript，所以要用普通的JS替换它，首先我们需要用有效的JS替换它。
+
+JSX 被 Babel 等构建工具转换为 JS。但这种转换通常很简单。**将标签内的代码替换为对`createElement'的调用，将标签名称、道具和子元素作为参数传递**。
+
+```jsx
+const element = React.createElement(
+  "h1",
+  { title: "foo" },
+  "Hello"
+)
+
+const container = document.getElementById("root")
+ReactDOM.render(element, container)
+```
+
+`React.createElement`从其参数中创建一个对象。除了一些验证，这就是它的全部工作。所以我们可以安全地**用它的输出来代替函数调用。
+
+```jsx
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+ReactDOM.render(element, container)
+```
+
+这就是一个元素，一个有两个属性的对象。类型 "和 "道具"（好吧，它可以有更多，但我们只关心这两个）。
+
+`type`是一个字符串，指定我们要创建的dom节点的类型，当你想创建一个HTML元素时，它就是你传递给`document.createElement`的`tagName`。它也可以是一个函数，但我们将把它留给第七步。
+
+`props`是另一个对象，它有所有来自JJSX属性的键和值。它也有一个特殊的属性。`children`。
+
+`children`在这种情况下是一个字符串，但它通常是一个有更多元素的数组。这就是为什么元素也是树。
+
+```jsx 10
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+ReactDOM.render(element, container)
+```
+
+我们需要替换的另一段React代码是对`ReactDOM.render`的调用。
+
+`render`是React改变dom的地方，所以让我们自己来做更新。
+
+```jsx 1,2,4,7,11,12
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+
+const node = document.createElement(element.type)
+node["title"] = element.props.title
+
+const text = document.createTextNode("")
+text["nodeValue"] = element.props.children
+
+node.appendChild(text)
+container.appendChild(node)
+```
+
+首先，我们使用元素`类型`创建一个节点，在本例中是`h1`。
+
+然后我们把所有的元素`props`分配给这个节点。在这里，它只是一个标题。
+
+为了避免混淆，我将用 "element "来指代React元素，用 "node "来指代DOM元素。
+
+```js 1,5,7,14,15
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+
+const node = document.createElement(element.type)
+node["title"] = element.props.title
+
+const text = document.createTextNode("")
+text["nodeValue"] = element.props.children
+
+node.appendChild(text)
+container.appendChild(node)
+```
+
+然后我们为子节点创建节点。我们只有一个字符串作为子节点，所以我们创建一个文本节点。
+
+使用`textNode`而不是，例如，设置`innerText`将允许我们以后以同样的方式对待所有元素。还要注意我们是如何设置`nodeValue`的，就像我们对`h1`标题所做的那样，这几乎就像字符串有`props: {nodeValue: "hello"}"，对吗？
+
+```js 9,17,18
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+
+const node = document.createElement(element.type)
+node["title"] = element.props.title
+
+const text = document.createTextNode("")
+text["nodeValue"] = element.props.children
+
+node.appendChild(text)
+container.appendChild(node)
+```
+
+最后，我们将 "textNode "追加到 "h1"，"h1 "追加到 "container"。
+
+```js 1:18
+const element = {
+  type: "h1",
+  props: {
+    title: "foo",
+    children: "Hello",
+  },
+}
+
+const container = document.getElementById("root")
+
+const node = document.createElement(element.type)
+node["title"] = element.props.title
+
+const text = document.createTextNode("")
+text["nodeValue"] = element.props.children
+
+node.appendChild(text)
+container.appendChild(node)
+```
+
+现在我们有了和以前一样的应用程序，但没有使用React
+
+</WaveSection>
+
+Lorem ipsum dolor sit amet, fugit errem volumus ex sit, magna fugit deserunt et qui. Sapientem mnesarchum ei vis, offendit appetere inimicus eu has. Te utamur voluptua per. Per dicant intellegebat in. Laboramus referrentur id his, electram philosophia sit an. Possim efficiendi no sea, eu admodum copiosae indoctum mea.
+
+Sit eligendi dignissim et, sit eius ancillae voluptatibus te. Ea summo nostrum omnesque sed. Deserunt iracundia definiebas ei est. An vitae reprimique ius, facer timeam cu nam.
+
+Id quot impetus prodesset eum, et usu iuvaret alienum. Ut amet quaerendum pro, impetus appetere disputando te per. Stet congue ancillae mei in, nam fuisset antiopam id. Ad denique blandit accommodare ius. Solum legere ea sea, per cu affert timeam, meis expetendis intellegebat ex pro.
+Delete me, and get writing!
+
+<WaveSection>
+
+```jsx file=./00.jsx
+```
+
+Foo
+
+```jsx file=./01.jsx
+```
+
+Bar
+
+</WaveSection>
+
+Lorem ipsum dolor sit amet, fugit errem avolumus ex sit, magna fugit deserunt et qui. Sapientem mnesarchum ei vis, offendit appetere inimicus eu has. Te utamur voluptua per. Per dicant intellegebat in. Laboramus referrentur id his, electram philosophia sit an. Possim efficiendi no sea, eu admodum copiosae indoctum mea.
+
+Sit eligendi dignissim et, sit eius ancillae voluptatibus te. Ea summo nostrum omnesque sed. Deserunt iracundia definiebas ei est. An vitae reprimique ius, facer timeam cu nam.
+
+Id quot impetus prodesset eum, et usu iuvaret alienum. Ut amet quaerendum pro, impetus appetere disputando te per. Stet congue ancillae mei in, nam fuisset antiopam id. Ad denique blandit accommodare ius. Solum legere ea sea, per cu affert timeam, meis expetendis intellegebat ex pro.
+Delete me, and get writing!
