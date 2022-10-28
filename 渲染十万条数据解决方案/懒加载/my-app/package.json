@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env PUBLIC_URL=https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/scroll react-scripts build",
+    "build": "cross-env PUBLIC_URL=https://demo.azhubaby.com/渲染十万条数据解决方案/懒加载/scroll react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

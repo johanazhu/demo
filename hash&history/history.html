@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/home">Home</a>
+    <a href="/user">User</a>
+    <a href="/about">About</a>
+    <div id="view"></div>
+</body>
+<script>
+
+    const elements = document.querySelectorAll('a[href]');
+    elements.forEach( el => el.addEventListener('click', (e) => {
+        e.preventDefault()
+        const test = el.getAttribute('href');
+        console.log('test', test)
+        history.pushState(null, null, el.getAttribute('href'))
+
+        onPopState()
+    }))
+
+    function onPopState() {
+        const view = document.getElementById("view");
+        console.log('location.pathname', location.pathname)
+        switch (location.pathname) {
+            case '/home':
+                view.innerHTML = 'Home'
+                break;
+            case '/user': 
+                view.innerHTML = 'User'
+                break;
+            case '/about': 
+                view.innerHTML = 'About';
+                break;
+            default:
+                view.innerHTML = 'Home'
+                break;
+        }
+    }
+    window.addEventListener("popstate", onPopState)
+</script>
+</html>

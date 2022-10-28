@@ -1,49 +1,49 @@
 # 📺 代码示例效果
 
-这是我做的一些 demo 的合集，线上链接：[azhubaby.com/demo/](https://azhubaby.com/demo/)
+这是我做的一些 demo 的合集，线上链接：[demo.azhubaby.com](https://demo.azhubaby.com)
 
 > 链接失效，请随时提出 issues
 
 ## 📌CSS
 
-- [水平垂直居中](https://azhubaby.com/demo/水平垂直居中.html)
-- [左边固定，右边自适应](https://azhubaby.com/demo/左边固定，右边自适应.html)
-- [圣杯布局](https://azhubaby.com/demo/圣杯布局与双飞翼布局/圣杯布局/index.html)
-- [双飞翼布局](https://azhubaby.com/demo/圣杯布局与双飞翼布局/双飞翼布局/index.html)
-- [三角形](https://azhubaby.com/demo/三角形.html)
-- [BFC](https://azhubaby.com/demo/BFC.html)
+- [水平垂直居中](https://demo.azhubaby.com/水平垂直居中.html)
+- [左边固定，右边自适应](https://demo.azhubaby.com/左边固定，右边自适应.html)
+- [圣杯布局](https://demo.azhubaby.com/圣杯布局与双飞翼布局/圣杯布局/index.html)
+- [双飞翼布局](https://demo.azhubaby.com/圣杯布局与双飞翼布局/双飞翼布局/index.html)
+- [三角形](https://demo.azhubaby.com/三角形.html)
+- [BFC](https://demo.azhubaby.com/BFC.html)
 
 ## 📌 自适应方案
 
-- [REM 布局(手写 rem)](https://azhubaby.com/demo/自适应方案/rem/index.html)
-- [REM 布局(flexible)](https://azhubaby.com/demo/自适应方案/flexible/index.html)
-- [VW 布局](https://azhubaby.com/demo/自适应方案/vw/index.html)
-- [PX + CSS 变量 布局](https://azhubaby.com/demo/自适应方案/px/index.html)
-- [媒体查询布局](https://azhubaby.com/demo/自适应方案/media/index.html)
+- [REM 布局(手写 rem)](https://demo.azhubaby.com/自适应方案/rem/index.html)
+- [REM 布局(flexible)](https://demo.azhubaby.com/自适应方案/flexible/index.html)
+- [VW 布局](https://demo.azhubaby.com/自适应方案/vw/index.html)
+- [PX + CSS 变量 布局](https://demo.azhubaby.com/自适应方案/px/index.html)
+- [媒体查询布局](https://demo.azhubaby.com/自适应方案/media/index.html)
 
 ## 📌 懒加载方案
 
-- [监听图片高度实现懒加载](https://azhubaby.com/demo/懒加载/index.html)
-- [getBoundingClientRect 实现懒加载](https://azhubaby.com/demo/懒加载/getBoundingClientRect.html)
-- [IntersectionObserver 实现懒加载](https://azhubaby.com/demo/懒加载/observer.html)
+- [监听图片高度实现懒加载](https://demo.azhubaby.com/懒加载/index.html)
+- [getBoundingClientRect 实现懒加载](https://demo.azhubaby.com/懒加载/getBoundingClientRect.html)
+- [IntersectionObserver 实现懒加载](https://demo.azhubaby.com/懒加载/observer.html)
 
 ## 📌 懒加载方案
 
-- [渲染十万条数据解决方案-虚拟列表-scroll](https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/index.html)
-- [渲染十万条数据解决方案-虚拟列表-IntersectionObserver](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
-- [渲染十万条数据解决方案-懒加载-scroll](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/scroll/index.html)
-- [渲染十万条数据解决方案-懒加载-getBoundingClientRect](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/getBoundingClientRect/index.html)
-- [渲染十万条数据解决方案-懒加载-IntersectionObserver](https://azhubaby.com/demo/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
-- [时间分片-一次性所处渲染问题](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/index.html)
-- [时间分片-解决方案](https://azhubaby.com/demo/渲染十万条数据解决方案/时间分片/requestAnimationFrame.html)
+- [渲染十万条数据解决方案-虚拟列表-scroll](https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/index.html)
+- [渲染十万条数据解决方案-虚拟列表-IntersectionObserver](https://demo.azhubaby.com/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
+- [渲染十万条数据解决方案-懒加载-scroll](https://demo.azhubaby.com/渲染十万条数据解决方案/懒加载/scroll/index.html)
+- [渲染十万条数据解决方案-懒加载-getBoundingClientRect](https://demo.azhubaby.com/渲染十万条数据解决方案/懒加载/getBoundingClientRect/index.html)
+- [渲染十万条数据解决方案-懒加载-IntersectionObserver](https://demo.azhubaby.com/渲染十万条数据解决方案/懒加载/IntersectionObserver/index.html)
+- [时间分片-一次性所处渲染问题](https://demo.azhubaby.com/渲染十万条数据解决方案/时间分片/index.html)
+- [时间分片-解决方案](https://demo.azhubaby.com/渲染十万条数据解决方案/时间分片/requestAnimationFrame.html)
 
 ## React
 
-- [setState 是同步还是异步](https://azhubaby.com/demo/setState是同步还是异步/build/index.html)
+- [setState 是同步还是异步](https://demo.azhubaby.com/setState是同步还是异步/build/index.html)
 
 ## 性能优化
 
-- [防抖与节流](https://azhubaby.com/demo/防抖与节流/index.html)
+- [防抖与节流](https://demo.azhubaby.com/防抖与节流/index.html)
 
 ## 网络缓存策略
 
@@ -55,9 +55,9 @@
 
 ## 微信营销页面
 
-- [微信营销页面之 WeixinJSBridge](https://azhubaby.com/demo/WeChat/WeixinJSBridge.html)
-- [微信营销页面之 自动播放音乐](https://azhubaby.com/demo/WeChat/自动播放音乐.html)
-- [微信营销页面之 网页长按保存及识别二维码](https://azhubaby.com/demo/WeChat/canvas-snapshot/index.html)
+- [微信营销页面之 WeixinJSBridge](https://demo.azhubaby.com/WeChat/WeixinJSBridge.html)
+- [微信营销页面之 自动播放音乐](https://demo.azhubaby.com/WeChat/自动播放音乐.html)
+- [微信营销页面之 网页长按保存及识别二维码](https://demo.azhubaby.com/WeChat/canvas-snapshot/index.html)
 
 
 

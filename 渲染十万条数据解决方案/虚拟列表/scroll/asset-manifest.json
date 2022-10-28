@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/css/main.c0e4f876.css",
-    "main.js": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/js/main.62281c23.js",
-    "static/js/787.28cb0dcd.chunk.js": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/js/787.28cb0dcd.chunk.js",
-    "static/media/logo.svg": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/index.html",
-    "main.c0e4f876.css.map": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/css/main.c0e4f876.css.map",
-    "main.62281c23.js.map": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/js/main.62281c23.js.map",
-    "787.28cb0dcd.chunk.js.map": "https://azhubaby.com/demo/渲染十万条数据解决方案/虚拟列表/scroll/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/css/main.c0e4f876.css",
+    "main.js": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/js/main.62281c23.js",
+    "static/js/787.28cb0dcd.chunk.js": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/js/787.28cb0dcd.chunk.js",
+    "static/media/logo.svg": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/index.html",
+    "main.c0e4f876.css.map": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/css/main.c0e4f876.css.map",
+    "main.62281c23.js.map": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/js/main.62281c23.js.map",
+    "787.28cb0dcd.chunk.js.map": "https://demo.azhubaby.com/渲染十万条数据解决方案/虚拟列表/scroll/static/js/787.28cb0dcd.chunk.js.map"
   },
-  "entrypoints": [
-    "static/css/main.c0e4f876.css",
-    "static/js/main.62281c23.js"
-  ]
+  "entrypoints": ["static/css/main.c0e4f876.css", "static/js/main.62281c23.js"]
 }
