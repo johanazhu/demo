@@ -1,0 +1,20 @@
+
+# dependencies
+# /node_modules/**
+**/node_modules/**
+/socket.io/node_modules
+/npm-debug.log*
+/yarn-error.log
+/yarn.lock
+/package-lock.json
+
+
+
+# misc
+.DS_Store
+
+
+# ide
+/.vscode
+/.idea
+

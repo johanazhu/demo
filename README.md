@@ -40,6 +40,8 @@
 ## React
 
 - [setState 是同步还是异步](https://demo.azhubaby.com/setState是同步还是异步/build/index.html)
+- [前端路由hash实现](https://demo.azhubaby.com/hash&history/hash.html)
+- [前端路由history实现](https://demo.azhubaby.com/hash&history/history.html)
 
 ## 性能优化
 
