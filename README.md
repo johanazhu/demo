@@ -62,6 +62,10 @@
 - [微信营销页面之 网页长按保存及识别二维码](https://demo.azhubaby.com/WeChat/canvas-snapshot/index.html)
 
 
+## 邮箱订阅
+
+- [邮箱订阅](https://demo.azhubaby.com/邮箱订阅/index.html)
+
 
 ## 请我喝咖啡☕️
 
