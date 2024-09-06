@@ -40,8 +40,8 @@
 ## React
 
 - [setState 是同步还是异步](https://demo.azhubaby.com/setState是同步还是异步/build/index.html)
-- [前端路由hash实现](https://demo.azhubaby.com/hash&history/hash.html)
-- [前端路由history实现](https://demo.azhubaby.com/hash&history/history.html)
+- [前端路由 hash 实现](https://demo.azhubaby.com/hash&history/hash.html)
+- [前端路由 history 实现](https://demo.azhubaby.com/hash&history/history.html)
 
 ## 性能优化
 
@@ -61,13 +61,7 @@
 - [微信营销页面之 自动播放音乐](https://demo.azhubaby.com/WeChat/自动播放音乐.html)
 - [微信营销页面之 网页长按保存及识别二维码](https://demo.azhubaby.com/WeChat/canvas-snapshot/index.html)
 
-
-## 邮箱订阅
-
-- [邮箱订阅](https://demo.azhubaby.com/邮箱订阅/index.html)
-
-
-## 请我喝咖啡☕️
+## 请我喝咖啡 ☕️
 
 如果您觉得这个项目能够帮助到您，可以给我个 star🌟，也可以推荐给您的朋友
 
@@ -76,4 +70,5 @@
 <img src="https://s2.loli.net/2022/10/09/31kvp8HRJuoBCfc.jpg" height="300px" width="300px" />
 
 ## License
+
 MIT
