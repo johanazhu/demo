@@ -11,7 +11,9 @@
 - [圣杯布局](https://demo.azhubaby.com/圣杯布局与双飞翼布局/圣杯布局/index.html)
 - [双飞翼布局](https://demo.azhubaby.com/圣杯布局与双飞翼布局/双飞翼布局/index.html)
 - [三角形](https://demo.azhubaby.com/三角形.html)
-- [BFC](https://demo.azhubaby.com/BFC.html)
+- [BFC——margin塌陷](https://demo.azhubaby.com/BFC/margin塌陷.html)
+- [BFC——margin合并](https://demo.azhubaby.com/BFC/margin合并.html)
+- [BFC——自适应布局](https://demo.azhubaby.com/BFC/自适应布局.html)
 
 ## 📌 自适应方案
 

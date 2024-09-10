@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin塌陷</title>
+</head>
+<style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    .father{
+        width: 200px;
+        height: 200px;
+        background-color: hsl(0 72.2% 50.6%);
+        margin-top: 100px;
+        /* overflow: hidden;*/
+    }
+    .son{
+        width: 100px;
+        height: 100px;
+        background-color: hsl(221.2 83.2% 53.3%);
+        margin-top: 150px;
+    }
+</style>
+<body>
+    <div>解决方法：解开注释</div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
