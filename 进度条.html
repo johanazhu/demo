@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条</title>
+    <style>
+        #progress-bar {
+            width: 100%;
+            height: 10px;
+            background: gainsboro
+        }
+
+        #progress-slot {
+            transition: all 0.5s;
+            background: red;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-bar">
+        <div id="progress-slot"></div>
+    </div>
+    <script>
+        let timer = 0;
+        function start() {
+            const dom = document.getElementById('progress-slot')
+            let width = 0;
+            timer = setInterval(() => {
+                width +=1;
+                dom.style.width = width + '%'
+                if (width >= 100) {
+                    clearInterval(timer)
+                }
+            }, 150)
+        }
+        start()
+    </script>
+</body>
+</html>
